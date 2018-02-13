@@ -4,22 +4,94 @@
 -->
 <ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
 	<li class="k-state-active"> 
-		<span class="panel-bar-label-no-wrap">Configuration</span>
+		<span class="panel-bar-label-no-wrap">General Configuration</span>
 		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
 			<div class="config-option-ie11-overflow-fix"> 
 				<!-- Code goes here -->
-				<div style="width:85%; margin:10px 0 15px 20px;">
+				<div style="width:85%; margin-right:25px;">
 					<pv-color-picker colorkeyword="Background", ng-model="config.BackgroundColor">
 					</pv-color-picker>
 				</div>
-				<div class="config-label">Border radius:</div> 
+
+				
+				<div class="config-label" style="margin-top:12px;" >Chart Title</div> 
+				<label class="flex-align-center" style="margin-top:8px; margin-right:25px;font-size:14px;" >
+				
+				<input type="text" class="" style="width:200px;"margin-right:25px;"
+					   ng-model="config.text">
+				</label><br />
+				<div class="config-label" style="margin-top:12px;" >Border radius:</div> 
 			    <input class="config-option-single-row-input" type="range" min="0"
 					max="100" step="1" ng-model="config.BorderRadius"
 					style="width:100px; height:100%; float: right; margin-right:25px;"
 					title="{{config.BorderRadius}}"> 
-					
-				</div>
+	
+								
 			</div>
 		</div> 
+
 	</li>
+</ul><br />
+
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Bar Configuration</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+									
+				<div class="config-label" style="margin-top:12px;" >Column Width</div> 
+			    <input class="config-option-single-row-input" type="range" min="0"
+					max="1" step="0.1" ng-model="config.columnWidth"
+					style="width:100px; height:100%; float: right; margin-right:25px;"
+					title="{{config.columnWidth}}"> 
+					
+				
+				<div class="config-label" style="margin-top:12px;" >Depth</div> 
+			    <input class=	"config-option-single-row-input" type="range" min="0"
+					max="100" step="1" ng-model="config.depth"
+					style="width:100px; height:50%; float: right; margin-right:25px;"
+					title="{{config.depth}}"> 
+					
+								
+			</div>
+		</div> 
+
+	</li>
+</ul><br />
+
+
+
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Customize Axis</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="config-label" style="margin-top:12px;" >Y-axis Label</div> 
+				<label class="flex-align-center" style="margin-top:8px; margin-right:25px;font-size:14px;" >
+				
+				<input type="text" class="" style="width:150px;"margin-right:8px;"
+					   ng-model="config.title">
+				</label>
+				<label class="flex-align-center"style="margin-top:8px; margin-right:25px;font-size:14px;" >
+					<input type="checkbox" class="c-config-checkbox"
+						   ng-model="config.includeElementName">Show Element Name<br />
+				</label>
+				<label class="flex-align-center" style="margin-top:8px; margin-right:25px;font-size:14px;" >
+				<input type="checkbox" class="c-config-checkbox"
+					   ng-model="config.useFixedAxisRange">Customize Y-axis range<br />
+				</label> 
+				<label class="flex-align-center" style="margin-top:8px; margin-right:25px;font-size:14px;"  ng-show="config.useFixedAxisRange">
+					<input type="number" class="" style="margin-right:8px;"
+						   ng-model="config.fixedYMin">Y-axis minimum<br />
+				</label>
+				<label class="flex-align-center" style=style="margin-top:8px; margin-right:25px;font-size:14px;"  ng-show="config.useFixedAxisRange">
+				<input type="number" class="" style="margin-right:8px;"
+					   ng-model="config.fixedYMax">Y-axis maximum<br />
+				</label><br />
+	
+			</div>
+		</div> 
+		</li>
 </ul>
+		
+		
