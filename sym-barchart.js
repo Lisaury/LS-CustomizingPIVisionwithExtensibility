@@ -213,11 +213,11 @@
 			chart.valueAxes[0].title=scope.config.title;
 			chart.titles[0].text=scope.config.text;
 			if (scope.config.useFixedAxisRange) {
-						chart.valueAxes[0].minimum = scope.config.fixedYMin;
-						chart.valueAxes[0].maximum = scope.config.fixedYMax;
+				chart.valueAxes[0].minimum = scope.config.fixedYMin;
+				chart.valueAxes[0].maximum = scope.config.fixedYMax;
 			} else {
-						chart.valueAxes[0].minimum = undefined;
-						chart.valueAxes[0].maximum = undefined;
+				chart.valueAxes[0].minimum = undefined;
+				chart.valueAxes[0].maximum = undefined;
 			}
 			
 			chart.validateData();
